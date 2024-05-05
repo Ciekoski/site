@@ -9,3 +9,8 @@
     margin-right: auto;
     width: 50%;
 }
+
+.warn {
+    color: red;
+    display: none;
+}

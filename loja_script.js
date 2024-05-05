@@ -44,8 +44,6 @@ function filtrar_produtos() {
   );
   let render = filtrados.map((p) => {
     let prod = document.createElement("div");
-    let background = document.createElement("div");
-    background.className = "img_bg";
     prod.className = "imgp";
     let img = document.createElement("img");
     img.src = p.img;
@@ -54,11 +52,11 @@ function filtrar_produtos() {
     let prod_name = document.createElement("h2");
     prod_name.style.color = "#000000";
     prod_name.innerHTML = p.nome;
-    background.appendChild(img);
-    background.appendChild(prod_name);
-    prod.appendChild(background);
+    prod.appendChild(img);
+    prod.appendChild(prod_name);
     let preco = document.createElement("h3");
     if (!p.preco) p.preco = 50;
+    if (localStorage.login) p.preco *= 0.95; // Desconto de 5% para usuarios cadastrados. Apenas para testar o login
     preco.innerHTML = `R$ ${p.preco.toFixed(2)}`;
     preco.style.color = "#ff5c00";
     prod.appendChild(preco);
