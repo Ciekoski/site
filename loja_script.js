@@ -56,6 +56,7 @@ function filtrar_produtos() {
     prod.appendChild(prod_name);
     let preco = document.createElement("h3");
     if (!p.preco) p.preco = 50;
+    if (localStorage.login) p.preco *= 0.95; // Desconto de 5% para usuarios cadastrados. Apenas para testar o login
     preco.innerHTML = `R$ ${p.preco.toFixed(2)}`;
     preco.style.color = "#ff5c00";
     prod.appendChild(preco);
