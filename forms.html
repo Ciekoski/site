@@ -1,21 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="vieport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Cadastro - Petshop</title>
-        <link rel="stylesheet" type="text/css" href="style-forms.css">
-        <script src="script.js" defer></script>
-    </head>
 
-    <body>
-<form id="formulario">
-    <label for="login">Login:</label><br>
-    <input type="text" name="login" id="login"><br><br>
-    <label for="senha">Senha</label><br>
-    <input type="password" name="senha" id="senha"><br>
-    <input type="submit" id="submit" value="Enviar">
-</form>
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <title>Cadastro - Petshop</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style-forms.css" />
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="header" id="header">
+        <div class="logo_header">
+            <img src="src/logo.png" class="img_logo_header" alt="Logo PET" />
+        </div>
+        <div class="navigation_header">
+            <div class="text_nav">Petshop Patinhas Felizes</div>
+            <div class="navigators">
+                <a href="#">Login</a>
+                <a href="index.html">Home</a>
+                <a href="#">Serviços</a>
+                <a href="loja.html">Loja</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <form id="formulario">
+            <label for="login">Login:</label><br />
+            <input type="text" name="login" id="login" /><br /><br />
+            <label for="senha">Senha</label><br />
+            <input type="password" name="senha" id="senha" /><br />
+            <input type="submit" id="submit" value="Enviar" />
+        </form>
+    </div>
+
+    <footer>
+        <div class="text_footer">
+            <h1>Redes Sociais</h1>
+        </div>
+        <div class="img_footer_container">
+            <img src="src/wpp.png" class="img_footer" />
+            <img src="src/fb.png" class="img_footer" />
+            <img src="src/ig.png" class="img_footer" />
+            <img src="src/tiktok.png" class="img_footer" />
+        </div>
+    </footer>
+</body>
+
 </html>
