@@ -18,33 +18,27 @@ body {
     background-color: #EEE9E9;
 }
 
-.img_logo_header {
-    width: 5em;
-
-}
-
-.header,
-.navigation_header {
+.logo_header {
     display: flex;
     flex-direction: row;
-    align-items: center;
-
+    width: clamp(60px, 15vw, 200px);
+    margin-left: 1vw;
 }
-
-.text_nav {
-    font-size: 25px;
-    position: absolute;
-    left: 100px;
-    width: 200px;
+.logo_header p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1vw;
+    font-weight: bold;
+    font-size: clamp(15px, 1.3vw, 30px);
+    transition-duration: 1s;
     color: #EEE9E9;
 }
 
-.navigators {
+.header {
     display: flex;
-    margin: 25px;
-    padding: 5px;
-    width: 300px;
-    justify-content: space-between;
+    height: clamp(50px, 20vw,100px);
+
 }
 
 .header {
@@ -53,10 +47,17 @@ body {
     background-color: #40A798;
 }
 
+.navigation_header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: clamp(100px,60vw,600px);
+}
 .navigation_header a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    font-size: clamp(15px, 1.3vw, 30px);
     transition-duration: 1s;
 }
 
@@ -70,27 +71,16 @@ body {
     text-align: center;
     justify-content: center;
     border-radius: 30px;
-    padding-top: 5em;
-    height: 10vh;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    height: clamp(20px, 10vw, 40px);
     transition: 1s;
 }
 
 .content h1 {
-    font-size: 60px;
+    font-size: clamp(15px, 6vw, 60px);
     text-shadow: 2px 2px black;
-}
-
-.img_cachorro {
-    height: 200px;
-    margin-left: 20px;
-}
-
-.third_content {
-    display: flex;
-    background-color: #EEE9E9;
-    justify-content: center;
-    align-items: center;
-    height: 280px;
+    transition: 1s;
 }
 
 .services {
@@ -102,31 +92,53 @@ body {
 
 .second_content {
     display: flex;
+    background-color: #EEE9E9;
+    justify-content: center;
+    align-items: center;
+    height: 20vw;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+
+.img_cachorro {
+    height: 20vw;
+    margin: 1vw;
+}
+
+.third_content {
+    display: flex;
     background-color: #FF5C00;
     color: white;
-    height: 35vh;
-    justify-content: space-between;
+    height: 30vw;
+    border-radius: 30px;
+    justify-content: space-evenly;
     align-items: center;
+    margin: 1vw;
 }
 
 .text_second {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin-left: 3vw;
+}
+.text_second p {
+    margin-top: 1vw;
+    font-size: clamp(12px, 2.5vw, 25px);
+}
+
+.text_second h1 {
+    font-size: clamp(15px, 5vw, 40px);
 }
 
 .fourth_content {
     display: flex;
     color: #40A798;
-    height: 35vh;
-    justify-content: space-around;
+    height: 20vw;
+    justify-content: center;
     align-items: center;
 }
 
 .text_fourth {
-    font-size: 20px;
-    width: 400px;
+    font-size: clamp(20px, 3vw, 50px);
+    width: 30vw;
     display: flex;
     align-items: center;
 }
@@ -135,20 +147,20 @@ body {
     display: flex;
     background-color: #40A798;
     border-radius: 30px;
-    height: 50px;
-    width: 200px;
+    height:clamp(50px, 5vw, 200px);
+    width: clamp(100px, 12vw, 200px);
     align-items: center;
     justify-content: center;
 }
 
-.login_button a {
-    font-size: 20px;
+.login_button {
+    font-size: clamp(10px, 2vw, 20px);
     color: #EEE9E9;
     text-decoration: none;
     transition-duration: 1s;
 }
 
-.login_button a:hover {
+.login_button:hover {
     color: black;
 }
 
@@ -158,26 +170,20 @@ footer {
     align-items: center;
     background-color: #40A798;
     color: #EEE9E9;
-    height: 10vh;
-    padding-right: 25px;
+    height: clamp(15px, 10vw, 100px);
+
 }
 
-.text_footer {
-    display: flex;
-    width: 250px;
-    justify-content: center;
-    align-items: center;
+.text_footer h1 {
+    font-size:clamp(5px, 3vw, 30px);
+    margin-left: 2vw;
 }
-
 .img_footer_container {
     display: flex;
     justify-content: space-between;
-    height: 60px;
-    width: 350px;
+    width: clamp(200px, 60vw, 350px);
+    margin-inline: 5vw;
 }
-
-@media screen and (max-width: 500px) {
-    h1 {
-        color: black;
-    }
+.img_footer_container img{
+    width: clamp(15px, 7vw, 100px);
 }
